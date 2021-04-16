@@ -8,22 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Expense Tracker</h1>
-    <h2>Add A New Item</h2>
-    <form action="">
-        <label for="">Name:</label> <input type="text" placeholder="Where was the expense taken?">
-        <label for="">Date:</label><input type="date">
-        <label for="">Amount:</label><input type="text">
-        <button>Add Expense</button>
-    </form>
-    <table border="1">
-        <tr>
-            <td>Name</td><td>Date</td><td>Amount</td>
-        </tr>
-        <tr>
-            <td></td><td></td><td></td><td></td>
-        </tr>
-    </table>
+    <div class="wrapper">
+        <h1>Expense Tracker</h1>
+        <h2>Add A New Item:</h2>
+            <form action="">
+                <div class="name-box">
+                    <label for="">Name: </label> <input type="text" placeholder="Where was the expense taken?">
+                </div>
+                <div class="date-amount-box">
+                    <label for="">Date: </label><input type="date" placeholder="mm/dd/yyyy">
+                    <label for="">Amount: </label><input type="text">
+                </div>
+            </form>
+
+        <button class="add-button">Add Expense</button>
+
+        <table>
+            <tr>
+                <td>Name</td><td>Date</td><td>Amount</td><td></td>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td><button class="remove-btn">✖</button></td>
+            </tr>
+        </table>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>

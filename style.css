@@ -1,8 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
 
+:root{
+    --dark-grey: #2f3640;
+    --dark-green: #009432;
+    --light-green: #2ecc71;
+    --light-grey: rgba(209, 216, 224,0.5);
+}
+
 *, *::after, *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
+    color: var(--dark-grey);
 }
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    width: 800px;
+    margin: 30px auto 0 auto;
+    padding: 10px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2{
+    text-align: center;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 3em;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 1.8em;
+    color: var(--dark-green);
+}
+
+.name-box, .date-amount-box{
+    display: flex;
+    padding: 5px;
+    font-size: 20px;
+}
+
+input{
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.name-box label {
+    margin-right: 10px;
+}
+
+.name-box input{
+    flex-grow: 1;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.date-amount-box label{
+    margin: 0 10px;
+}
+
+.date-amount-box label:first-child{
+    margin-left: 0;
+}
+
+.date-amount-box input:first-child{ padding: 3px; }
+
+.date-amount-box input{
+    flex-grow: 1;
+    font-size: 16px;
+    padding: 2px;
+}
+
+.add-button{
+    position: relative;
+    width: 200px;
+    align-self: center;
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 10px;
+    margin: 3% 0 5% 0;
+    font-size: 1.1em;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+table, td{
+    border: 0.5px solid var(--light-grey);
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.remove-btn{
+    color: #fff;
+    background-color: var(--dark-green);
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+
+
