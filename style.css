@@ -95,19 +95,30 @@ input{
     text-align: center;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    outline: none;
 }
 
+.add-button:hover{
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 5px 3px var(--light-grey);
+}
+
+
 table, td{
-    border: 0.5px solid var(--light-grey);
     padding: 5px;
     font-size: 1.1em;
+    border-left: 0.5px solid var(--light-grey);
 }
 
 table{
     border-collapse: collapse;
 }
 
-.remove-btn{
+
+.delete-btn{
     color: #fff;
     background-color: var(--dark-green);
     height: 30px;
@@ -115,8 +126,72 @@ table{
     border: none;
     border-radius: 5px;
     font-size: 1em;
+    cursor: pointer;
 }
 
+/* popup section */
+
+#overlay{
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .2s ease-in-out;
+}
+
+.popup-info{
+    opacity: 0;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    border: solid 2px var(--dark-grey);
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    transition: .2s ease-in-out;
+}
+
+.popup-info p{
+    position: relative;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 45px;
+}
+
+.popup-info button{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* active */
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup-info.active{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
 
 
 

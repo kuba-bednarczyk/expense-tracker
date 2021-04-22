@@ -16,8 +16,8 @@
                     <label for="">Name: </label> <input type="text" placeholder="Where was the expense taken?">
                 </div>
                 <div class="date-amount-box">
-                    <label for="">Date: </label><input type="date" placeholder="mm/dd/yyyy">
-                    <label for="">Amount: </label><input type="text">
+                    <label for="">Date: </label><input type="date" placeholder="mm/dd/yyyy" class="date-input">
+                    <label for="">Amount: </label><input type="number" class="amount-input">
                 </div>
             </form>
 
@@ -25,12 +25,16 @@
 
         <table>
             <tr>
-                <td>Name</td><td>Date</td><td>Amount</td><td></td>
-            </tr>
-            <tr>
-                <td></td><td></td><td></td><td><button class="remove-btn">✖</button></td>
+                <td>Name:</td><td>Date:</td><td>Amount:</td><td></td>
             </tr>
         </table>
+    </div>
+
+    <div id="overlay" ></div>
+
+    <div class="popup-info">
+        <p>Enter the necessary data!</p>
+        <button>✖</button>
     </div>
 
     <script src="index.js"></script>
